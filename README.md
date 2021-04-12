@@ -41,7 +41,7 @@ I do data cleaning to correctly assign the data type on some features, drop all 
 ### 3. Modelling
 I choose recall for metric evaluation score for the subsequent modelling since I want to minimize the false negative error. I cross-validated 5 models (Logistic Regression, KNN, Decision Tree, Random Forest, and Extreme Gradient Boosting) without and with imbalance dataset handling (SMOTE, NearMiss, and algorithm-based methods) to see which models give the highest cross validation score. The model that gave the best performance score and lowest standard deviation score is Random Forest with resampling Near Miss method with recall score 0.93.
 
-<p align="center"> <img src="https://github.com/marshaalexandra/Final_Project_Purwadhika/blob/main/cross%20validation%20model.png" alt="" width="700" height="300"> </p><br>
+<p align="center"> <img src="https://github.com/marshaalexandra/Final_Project_Purwadhika/blob/main/cross%20validation%20model.png" alt="" width="500" height="300"> </p><br>
 
 ```
 
@@ -49,8 +49,6 @@ CHOSEN MODEL:
 RandomForestClassifier(max_depth = 3, n_estimators = 20, max_features = 4) with NearMiss()
 
 ```
-<br>
-<br>
 
 ### 4. Hyperparameter Tuning
 
