@@ -4,15 +4,13 @@ This final project is one of the requirements for graduating from Job Connector 
 <p align="center"  color="rgb(0, 90, 71)">
 <h1>Background</h1>
 </p>
-<br>
-<br>
 
 <p align='justify' style="font-weight: bold;">
 Customer churn refers to when customers (e.g. subscribers, users, players etc.) stop using certain company product or service. Telecommucation companies experiences a wide range of 10-67% annual customer churn rate. This industry is highly competitive due to convenient nature of the service, allowing customers to choose and switch from multiple service providers and other factors such as better price offers, more interesting packages, bad service experiences or change of customers’ personal situations. In this highly competitive market, increasing retention period of customers is a considerable concern within the telecommunication companies.
 </p>
 
 <p align="center">
-<img src="https://github.com/marshaalexandra/Final_Project_Purwadhika/blob/main/customerchurn.jpeg" height="100" width="180">
+<img src="https://github.com/marshaalexandra/Final_Project_Purwadhika/blob/main/customerchurn.jpeg" height="300" width="200">
 </p>
 
 <h1>Goal</h1>
@@ -28,7 +26,7 @@ The customer churn would require costs for lost revenue, marketing costs for att
 
 <h1>The Data</h1>
 <p align='justify' style="font-weight: bold;">
-The dataset that I choose is a <a href="https://www.kaggle.com/blastchar/telco-customer-churn">telco churn dataset</a> from Kaggle. It contains information about a fictional telco company that provided home phone and Internet services to 7043 customers in California in Q3.</p>
+The dataset that I choose is a <a href="https://www.kaggle.com/blastchar/telco-customer-churn">telco churn dataset</a> from Kaggle. It contains information about a fictional telco company that provided home phone and Internet services to 7043 customers in California in Q3.</p><br><br>
   
 --------------------------------------------------------------------
  <p align="center"  color="rgb(0, 90, 71)">
