@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualization</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+    crossorigin="anonymous"></script>
+
+</head>
+<body style="background-image: url({{url_for('static',filename='pastel.jpeg') }});background-size:cover">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/"><b>Home</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" 
+        aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/database">Dataset</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/visualize">Visualization</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/predict">Prediction</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <!-- HEADING -->
+    <center><br>
+        <img src="../static/telco2.png" width="8%" ><br><br>
+        <h2 class="display-4"><strong><span class="badge badge-dark">Exploratory Data Analysis Insight</span></strong></h2>
+        <br><br>
+    </center>
+
+    <!--BASIC EDA-->
+    <div class="container-fluid">
+        <h2 class="display-5"><span class="badge badge-secondary">Basic EDA</span></h2>
+        <center><img src="../static/gabungin2.png" width=50%><br><br></center>
+       
+    </div>
+    <div class="container-fluid">
+        <p class = 'd-inline'><strong>Basic EDA Insights:</strong></p>
+        <p class="text-justify">
+            <ol>
+                <li>
+                    The gender distribution is balanced in this dataset.      
+                </li>
+                <li>
+                    There are approximately 16.2% of senior citizens in the dataset. The dataset is dominated by younger people.
+                </li>
+                <li>
+                    The ratio between customers who have partner and customers who live alone is also rather balanced.
+                </li>
+                <li>
+                    Around 70% of customers within this dataset do not have dependents (child, parents, or grandparents).
+                </li>
+                <li>
+                    The company experiences overall 26.54% churn rate. This means there is a class imbalance of the data between churners and non-churners.
+                </li>
+            </ol>
+        </p>
+    </div><br><br>
+
+     <!--Churn Rate by Demographics-->
+     <div class="container-fluid">
+        <h2 class="display-5"><span class="badge badge-secondary">Churn Rate by Demographics</span></h2>
+        <center><img src="../static/Churn Rate demo.png" width=50%><br><br></center>
+       
+    </div>
+    <div class="container-fluid">
+        <p class = 'd-inline'><strong>Churn Rate by Demographic Insights:</strong></p>
+        <p class="text-justify"><ol>
+<li>
+    Senior citizens churn rate is much higher (41.6%; almost 2x higher) than non-senior churn rate (23.6%). The high churn rate in senior citizens would be driven by various factors, such as death, lack of use caused by deterioration of bodily function and diseases, or inability to adapt with operating systems and services.
+</li>
+<li>
+    Male and female customers have similar churning rate (26.9% and 26.1%). This means gender does not play essential role in predicting customer churn rate.
+</li>
+<li>
+    Customers without partners have higher churn rate (32.9%) compared to customers with partner (19.7%). Similarly, customers without dependents also have 2x higher churn rate (31.3%) compared to customers with dependents (15.4%). This indicates that once a customer settles with partner or families, they also would less likely to churn on services.
+</li></ol></p>
+    </div><br><br>
+
+ <!--Churn Rate by Phone Services-->
+    <div class="container-fluid">
+        <h2 class="display-5"><span class="badge badge-secondary">Churn Rate by Phone Services</span></h2>
+        <center><img src="../static/Churn Rate Phone.png" width=50%><br><br></center>
+           
+    </div>
+    <div class="container-fluid">
+        <p class = 'd-inline'><strong>Churn Rate by Phone Service Insights:</strong></p>
+        <p class="text-justify">Customers who subscribe to phone service (26.7%) have slightly higher churn rates compared customers who do not subcribe (24.9%). 
+            Similarly, customers who subscribes to multiple telephone lines (additional phone service) has slightly higher churn rate (28.6%) compared to customers who do not subscribe to the service (25%) and who do not have phone service (24.9%). However, the significance of phone service and multiple telephone lines in predicting customer churn rate might be negligible since the churn rates are pretty similar.
+        </p>
+    </div><br><br>
+
+<!--Churn Rate by Internet Services-->
+    <div class="container-fluid">
+        <h2 class="display-5"><span class="badge badge-secondary">Churn Rate by Internet Services</span></h2>
+        <center><img src="../static/Churn Rate internet_.png" width=50%><img src="../static/Churn Rate internet5.png" width=30%><br><br></center>
+           
+    </div>
+    <div class="container-fluid">
+        <p class = 'd-inline'><strong>Churn Rate by Internet Service Insights:</strong></p>
+        <p class="text-justify"> <ol> <li> 
+            Customers using internet service with fiber optic as part of their contract have much higher churn rate (41.9%). Customers with DSL (18.9%) are less probable to churn. Even though DSL has slower connection speed than fiber optic, using fiber optic might have more connection problems therefore the customers using fiber optic service are more likely to churn.
+        </li>
+    <li>
+        The company provides paid additional internet services, such as online security, online backup, device protection, and technical support plan. Customers who do not subscribe to these services have moderately higher churn rate (online security = 41.7%, online backup = 39.9%, device protection = 39.1%, & technical support = 41.6%)  compared to customers who subscribe to each respective service (online security = 14.6%, online backup = 21.5%, device protection = 22.5%, & technical support = 15.1%).
+    </li>
+    <li>
+        Customers who do not subscribe to the internet service have very low churn rate (7.4%), meaning they only use the home phone service. Therefore, it can be assumed that most of the churn rate came from the internet and its additional services. It is interesting to see that customers who only use internet service have high churn rate, however when the customers have internet service and its additional service, they are less likely to churn. They might be satisfied with the additional services provided by the company.
+    </li>
+    </ol>
+        </p>
+    </div><br><br>
+
+    <!--Churn Rate by Streaming Services-->
+<div class="container-fluid">
+    <h2 class="display-5"><span class="badge badge-secondary">Churn Rate by Streaming Services</span></h2>
+    <center><img src="../static/Churn Rate streaming.png" width=50%><br><br></center>
+       
+</div>
+<div class="container-fluid">
+    <p class = 'd-inline'><strong>Churn Rate by Streaming Service Insights:</strong></p>
+    <p class="text-justify">Customers who do not use their internet service to stream TV program (33.5%) and movie (33.6%) have slightly higher churn rate compared to customers who stream each respective service (30% & 29.9%). However, the churn rates are pretty similar so the differences are negligible. Since the company does not charge additional fee for streaming services, it does not matter whether the customers use streaming services or not thereby resulting a similar churn rate. Based on this analysis, streaming service might not be predictive in churn rate prediction. 
+    </p>
+</div><br><br>
+
+<!--Churn Rate by Tenure and Contract-->
+<div class="container-fluid">
+    <h2 class="display-5"><span class="badge badge-secondary">Churn Rate by Tenure and Contract</span></h2>
+    <h4 class="mb-4">Churn Rate by Tenure</h4>
+    <center><img src="../static/Churn Rate Tenure.png" width=60%><br><br></center>
+    <p class="text-justify"><strong>Churn Rate by Tenure Insights: </strong><br>From the visualizations above, churning customers have much lower tenure compared to non-churners. This was supported by boxplot visualization, where the median of tenure between churners vs non-churners are: approximately 10 months vs 40 months meaning churners mostly only use the services less than a year. In comparison, the non-churners mostly use the service for 3 years, 4x longer than the churners. This is a reasonable insights as longer tenure means customers are satisfied with services provided, thereby reducing probability of churning.</p><br>
+    <h4 class="mb-4">Churn Rate by Contract</h4>
+    <center><img src="../static/Churn Rate contract.png" width=30%><br><br></center>
+    <p class="text-justify"><strong>Churn Rate by Contract Insights: </strong><br>
+    Churn rate for month-to-month contracts much higher (42.7%) that for other contract durations (one-year = 11.3% & two-year = 2.8%). This is reasonable, as shorter contract duration makes it easier for customers to stop using the service. Furthermore, longer contract duration probably have contractual fines and therefore customers have to wait untill the end of contract to churn.</p><br><br></div>
+
+    <!--Churn Rate by Charges and Payment-->
+<div class="container-fluid">
+    <h2 class="display-5"><span class="badge badge-secondary">Churn Rate by Charges and Payment</span></h2>
+    <h4 class="mb-4">Churn Rate by Monthly Charges</h4>
+    <center><img src="../static/Churn Rate Monthly.png" width=60%><br><br></center>
+    <p class="text-justify"><strong>Churn Rate by Monthly Charges Insights: </strong><br>
+    From the visualizations above, churning customers have higher monthly charges compared to non-churners. In the boxplot visualization, we can see the median of monthly charges between churners vs non-churners equals to: approximately 80 USD vs 65 USD. This is also a reasonable insight as customers constantly look for good service with better price offers, therefore higher charges would make them looking for other service providers (increase churn rate).<br>
+    </p><br>
+    <h4 class="mb-4">Churn Rate by Total Charges</h4>
+    <center><img src="../static/Churn Rate Total.png" width=60%><br><br></center>
+    <p class="text-justify"><strong>Churn Rate by Total Charges Insights: </strong><br>
+        Based on visualizations above, churning customers have lower amount total charges compared to non-churners. From the bar plot above, the median of total charges between churners vs non-churners equals to: approximately 700 USD vs 1600 USD. This is an interesting insight as churners have higher monthly charges, but lower total charges compared to non-churners. However, looking at the definition of total charges, it is logical that total charges of churners is significantly lower. This is because the total charges are calculated at the end of the quarter. The churners will churn before the end of the quarter, therefore the charges calculated will be less than non-churner customers.<br>
+        </p><br>
+    <h4 class="mb-4">Churn Rate by Billing and Payment Method</h4>
+    <center><img src="../static/Churn Rate payment_billing.png" width=50%><br><br></center>
+    <p class="text-justify"><strong>Churn Rate by Billing and Payment Method Insights: </strong><br>
+        <ol>
+            <li>
+                Customers who use paperless billing have 2x higher churn rate (33.6%) compared to customers who use paper billing (16.3%). Some customer prefer to use paper billing, such as elderly people because they might be more familiar with it. Therefore, they might churn when they discover the paperless billing method used in the company.
+            </li>
+        <li>
+            Payment method using electronic check shows much higher churn rate (45.3%) than other payment methods ((mailed-check = 19.1%, bank transfer = 16.7%, & credit card = 15.24%). Senior citizens would prefer mailed check and younger people would prefer using autopay from bank transfer and credit card rather than e-check.
+        </li>
+        </ol>
+        </p>
+    <br><br>     
+</div>
+
+
+<!--Further Insights-->
+<div class="container-fluid">
+    <h2 class="display-5"><span class="badge badge-secondary">Further Insights:</span></h2>
+    <h4 class="mb-4">Churn Rate by Number of Services (Phone and Internet Services)</h4>
+    <center><img src="../static/Churn Rate num_service.png" width=30%><br><br></center>
+    <p class="text-justify"><strong>Churn Rate by Number of Services Insights: </strong><br>
+    The countplot above visualizes the number of services a customer subscribes to (including phone and internet service along with all of their additional services).
+    Based on the visualization above, customers who have 2-5 services are inclined to churn. The highest churn rate observed to customers who have subscribed to 3 services.
+    </p><br><br>
+    <h4 class="mb-4">Churn Rate Based on Number of Internet and Its Paid Additional Services </h4>
+    <center><img src="../static/Churn Rate inet_service.png" width=30%><br><br></center>
+    <p class="text-justify"><strong>Churn Rate by Number of Internet and Its Paid Additional Services Insights: </strong><br>
+    This visualization above focuses on the number of internet services, especially the paid ones since phone services and streaming services resulted in similar churn rates in each of their categories. On the countplot, 0 equals to no internet service, 1 equals to main internet service, 2 equals to main internet service + 1 additional service, and so on.<br> 
+    Based on the countplot above, the highest churn rate is observed when customers using only the main internet service (56.6%) or internet service with 1 additional service (38.8%). When customers subscribe to 2 or more additional services, they are less likely to churn, implying they are already satisfied with the internet and its additional services provided. It can be assumed that the main internet service is most likely the root cause of customer churn.
+    </p>
+<br><br>       
+</div>
+
+
+</div>
+<div class="container-fluid">
+    <div class="col-12 grid-margin" id="doc-intro">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="mb-4">Summary: </h4>
+                <p class="text-justify">In this dataset, the customer churn rate might be influenced by several factors. Demographically, customers are likely to churn if they are senior citizens or if they are living alone. The customer also are likely to churn when they use month-to-month contract and are estimated to churn after around 10-months. Looking at the main services the company provides (home-phone and internet), the customers are likely to churn when they subscribe to the internet service, especially the fiber-optic one. However, the customers who use 2 or more its paid additional services are satisfied with the internet service and are loyal customers. From billing and payment aspects, the customers are likely to churn when their monthly charges are around 80 USD and if they are billed through paperless billing, especially electronic check. It is to be noted that the attributes mentioned above might influence each other or have more influences on the churn rate compared to the others. There is also external factors besides the dataset features that could influence the customer churn rate.</p>
+                <h4 class="mb-4">Suggestions for the Company: </h4>
+                <p class="text-justify"><ol><li>The company should build machine learning model that could correctly predict the churned customers to avoid revenue loss early on the phase based on the data obtained.</li>
+                <li> The company should also focus on improving the services, especially the main internet services. The company has to evaluate the issues within the internet service which cause high churn rate (e.g. connection problem, price strategy, or customer service).</li>
+                <li> Through exploratory data analysis and machine learning model, the company can obtain customer profile who are likely to churn and who are likely to stay. Future marketing and promotion strategy could be directed to audiences who fit customer profile who are likely to stay, therefore minimizing unnecessary costs.</li>
+            </ol> </p>
+            </div>
+        </div>
+    </div>
+</div> 
+<br><br>
+
+
+    <!--JavaScript at end of body for optimized loading-->
+     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+     <script type="text/javascript" src="js/materialize.min.js"></script>
+
+</body>
+</html>
