@@ -109,6 +109,6 @@ tn :  396  fp :  1153  fn :  38  tp :  523
 ### 7. Model Deployment in Dashboard
 The following below is the dashboard containing the telco customer churn predictor result:
 
-<p align="center"> <img src="https://github.com/marshaalexandra/Final_Project_Purwadhika/blob/main/dash%20model.png" alt="" width="600" height="500"> </p><br>
+<p align="center"> <img src="https://github.com/marshaalexandra/Final_Project_Purwadhika/blob/main/dash%20model.png" alt="" width="800" height="500"> </p><br>
 
 --------------------------------------------------------------------
