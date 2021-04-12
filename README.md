@@ -31,7 +31,6 @@ The dataset that I choose is a <a href="https://www.kaggle.com/blastchar/telco-c
  <p align="center"  color="rgb(0, 90, 71)">
 <h1>Step of work</h1>
 </p>
-<p align='justify' style="font-weight: bold;">
   
 ### 1. Exploratory Data Analysis (EDA)
 Started with import the dataset which is telco churn dataset. After that, I do EDA to explore which features that are predictive to churn rate prediction based on the feature types (numerical and categorical) using several visualization such as pie chart, countplot, and distribution plot.
@@ -108,6 +107,9 @@ weighted avg       0.75      0.44      0.42      2110
 tn :  396  fp :  1153  fn :  38  tp :  523
 ```
 ### 7. Model Deployment in Dashboard
+The following below is the dashboard containing churn predictor result
 
-</p>
+<p align="center"> <img src=https://github.com/marshaalexandra/Final_Project_Purwadhika/blob/main/dash%20model.png" alt="" width="600" height="400"> </p><br>
+
+
 --------------------------------------------------------------------
