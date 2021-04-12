@@ -4,13 +4,12 @@ This final project is one of the requirements for graduating from Job Connector 
 <p align="center"  color="rgb(0, 90, 71)">
 <h1>Background</h1>
 </p>
-
 <p align='justify' style="font-weight: bold;">
 Customer churn refers to when customers (e.g. subscribers, users, players etc.) stop using certain company product or service. Telecommucation companies experiences a wide range of 10-67% annual customer churn rate. This industry is highly competitive due to convenient nature of the service, allowing customers to choose and switch from multiple service providers and other factors such as better price offers, more interesting packages, bad service experiences or change of customers’ personal situations. In this highly competitive market, increasing retention period of customers is a considerable concern within the telecommunication companies.
 </p>
 
 <p align="center">
-<img src="https://github.com/marshaalexandra/Final_Project_Purwadhika/blob/main/customerchurn.jpeg" height="300" width="200">
+<img src="https://github.com/marshaalexandra/Final_Project_Purwadhika/blob/main/customerchurn.jpeg" height="300" width="400">
 </p>
 
 <h1>Goal</h1>
@@ -26,13 +25,12 @@ The customer churn would require costs for lost revenue, marketing costs for att
 
 <h1>The Data</h1>
 <p align='justify' style="font-weight: bold;">
-The dataset that I choose is a <a href="https://www.kaggle.com/blastchar/telco-customer-churn">telco churn dataset</a> from Kaggle. It contains information about a fictional telco company that provided home phone and Internet services to 7043 customers in California in Q3.</p><br><br>
+The dataset that I choose is a <a href="https://www.kaggle.com/blastchar/telco-customer-churn">telco churn dataset</a> from Kaggle. It contains information about a fictional telco company that provided home phone and Internet services to 7043 customers in California in Q3.</p><br>
   
 --------------------------------------------------------------------
  <p align="center"  color="rgb(0, 90, 71)">
 <h1>Step of work</h1>
 </p>
-<br>
 
 ### 1. Exploratory Data Analysis (EDA)
 Started with import the dataset which is telco churn dataset. After that, I do EDA to explore which features that are predictive to churn rate prediction based on the feature types (numerical and categorical) using several visualization such as pie chart, countplot, and distribution plot.
@@ -44,9 +42,12 @@ I do data cleaning to correctly assign the data type on some features, drop all 
 I choose recall for metric evaluation score for the subsequent modelling since I want to minimize the false negative error. I cross-validated 5 models (Logistic Regression, KNN, Decision Tree, Random Forest, and Extreme Gradient Boosting) without and with imbalance dataset handling (SMOTE, NearMiss, and algorithm-based methods) to see which models give the highest cross validation score. The model that gave the best performance score and lowest standard deviation score is Random Forest with resampling Near Miss method with recall score 0.93.
 
 <p align="center"> <img src="https://github.com/marshaalexandra/Final_Project_Purwadhika/blob/main/cross%20validation%20model.png" alt="" width="700" height="275"> </p><br>
+
 ```
+
 CHOSEN MODEL:
 RandomForestClassifier(max_depth = 3, n_estimators = 20, max_features = 4) with NearMiss()
+
 ```
 <br>
 <br>
@@ -107,8 +108,6 @@ weighted avg       0.75      0.44      0.42      2110
 
 tn :  396  fp :  1153  fn :  38  tp :  523
 ```
-
-
-<br>
+### 7. Model Deployment in Dashboard
 
 --------------------------------------------------------------------
