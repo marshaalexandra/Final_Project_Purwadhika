@@ -107,8 +107,8 @@ weighted avg       0.75      0.44      0.42      2110
 tn :  396  fp :  1153  fn :  38  tp :  523
 ```
 ### 7. Model Deployment in Dashboard
-The following below is the dashboard containing churn predictor result
+The following below is the dashboard containing the telco customer churn predictor result:
 
-<p align="center"> <img src="https://github.com/marshaalexandra/Final_Project_Purwadhika/blob/main/dash%20model.png" alt="" width="500" height="300"> </p><br>
+<p align="center"> <img src="https://github.com/marshaalexandra/Final_Project_Purwadhika/blob/main/dash%20model.png" alt="" width="600" height="500"> </p><br>
 
 --------------------------------------------------------------------
